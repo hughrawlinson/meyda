@@ -64,6 +64,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "commander": "^2.20.3",
     "dct": "0.1.0",
     "fftjs": "0.0.4",
     "node-getopt": "^0.3.2",
