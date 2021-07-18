@@ -93,13 +93,15 @@ export function mean(a) {
   );
 }
 
+const MEL_CONSTANT = 1127;
+
 function _melToFreq(melValue) {
-  var freqValue = 700 * (Math.exp(melValue / 1125) - 1);
+  var freqValue = 700 * (Math.exp(melValue / MEL_CONSTANT) - 1);
   return freqValue;
 }
 
 function _freqToMel(freqValue) {
-  var melValue = 1125 * Math.log(1 + freqValue / 700);
+  var melValue = MEL_CONSTANT * Math.log(1 + freqValue / 700);
   return melValue;
 }
 

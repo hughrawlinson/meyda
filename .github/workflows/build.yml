@@ -7,22 +7,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [
-            # Disabled because with typescript, the 10.x build fails by running out
-            # of heap space. I can't figure out how to increase heap size on the build
-            # but since we're dropping support for 10.x soon, I think this is fine.
-            # Tests still run on all the other versions, and we publish from 16.x now,
-            # so we I think we're fine to disable it for the next few releases.
-            # See you in 2035.
-            #
-            # https://github.com/meyda/meyda/pull/908/checks?check_run_id=3090204396
-            # 10.x,
-            12.x,
-            13.x,
-            14.x,
-            15.x,
-            16.x,
-          ]
+        node-version: [12.x, 14.x, 15.x, 16.x]
 
     steps:
       - uses: actions/checkout@v1
